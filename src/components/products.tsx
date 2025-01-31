@@ -1,5 +1,6 @@
 type products = {
     image: string,
+    name: string,
     description: string,
     price: number
 }
@@ -19,7 +20,10 @@ export function Products({products,productType}:productsProps) {
                         <div key={index}>
                             <img src={product.image} alt="" />
                             <div>
-                                <p>{product.description}</p>
+                                <div>
+                                    <h3>{product.name}</h3>
+                                    <p>{product.description}</p>
+                                </div>
                                 <p>${product.price}</p>
                             </div>
                             <button>Add to cart</button>
