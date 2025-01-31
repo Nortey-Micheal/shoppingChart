@@ -15,17 +15,19 @@ export function Navbar({links,image}: navbarProps) {
     const cart = useContext(CartContext)
 
     return (
-        <nav className="flex justify-between bg-blue-900 px-2 py-3 text-lg">
-            <img src={image} alt="Logo" />
-            <div className="flex gap-10">
-                <ul className="flex gap-14">
-                    {links.map((link,index) => {
-                        return (
-                            <li className="font-bold text-blue-50 bg-blue-500 px-2 rounded hover:text-blue-500 hover:bg-blue-50" key={index}><a href={link.url} >{link.label}</a></li>
-                        )
-                    })}
-                </ul>
-                <button className="w-12"  style={{backgroundImage: `url('src/assets/cart.svg')`,backgroundRepeat: "no-repeat",position:"relative"}}><p className="absolute bottom-3 left-5 bg-blue-300 rounded-full w-7">{cart.length}</p></button>
+        <nav className="bg-blue-900 text-blue-100 px-2 py-3 text-lg">
+            <div className="flex justify-between max-w-5xl lg:mx-auto">
+                <img src={image} alt="Logo" />
+                <div className="flex gap-10">
+                    <ul className="flex gap-14">
+                        {links.map((link,index) => {
+                            return (
+                                <li className="font-bold text-blue-50 bg-blue-500 px-2 rounded hover:text-blue-500 hover:bg-blue-50" key={index}><a href={link.url} >{link.label}</a></li>
+                            )
+                        })}
+                    </ul>
+                    <button className="w-12"  style={{backgroundImage: `url('src/assets/cart.svg')`,backgroundRepeat: "no-repeat",position:"relative"}}><p className="absolute bottom-3 left-5 text-blue-950 bg-blue-300 rounded-full w-7">{cart.length}</p></button>
+                </div>
             </div>
         </nav>
     )

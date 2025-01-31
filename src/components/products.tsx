@@ -12,12 +12,12 @@ type productsProps = {
 
 export function Products({products,productType}:productsProps) {
     return (
-        <section>
-            <h2>{productType}</h2>
-            <div>
+        <section className="px-2 max-w-5xl lg:mx-auto">
+            <h2 className="text-3xl">{productType}</h2>
+            <div className="grid grid-rows-3 grid-flow-col border-2 rounded-2xl p-4 gap-5 ">
                 {products.map((product,index) => {
                     return (
-                        <div key={index}>
+                        <div className="" key={index}>
                             <img src={product.image} alt="" />
                             <div>
                                 <div>
