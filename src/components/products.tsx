@@ -12,21 +12,21 @@ type productsProps = {
 
 export function Products({products,productType}:productsProps) {
     return (
-        <section className="px-2 max-w-5xl lg:mx-auto">
-            <h2 className="text-3xl">{productType}</h2>
-            <div className="grid grid-rows-3 grid-flow-col border-2 rounded-2xl p-4 gap-5 ">
+        <section className="px-2 max-w-5xl mb-20 min-w-lg lg:mx-auto">
+            <h2 className="text-3xl my-10 text-center underline underline-offset-5">{productType}</h2>
+            <div className="grid lg:grid-rows-3 lg:grid-flow-col border-2 rounded-2xl p-4 gap-5 ">
                 {products.map((product,index) => {
                     return (
-                        <div className="" key={index}>
-                            <img src={product.image} alt="" />
-                            <div>
-                                <div>
-                                    <h3>{product.name}</h3>
-                                    <p>{product.description}</p>
+                        <div className="bg-blue-200 h-[600px] w-3/4 lg:w-[450px] rounded-2xl sm:mx-auto" key={index}>
+                            <img className="h-[400px] w-full rounded-t-2xl bg-blue-50" src={product.image} alt="" />
+                            <div className="flex gap-2 py-3 px-3 ">
+                                <div className="">
+                                    <h3 className="text-2xl mb-5 font-extrabold">{product.name}</h3>
+                                    <p className="text-lg text-gray-600">{product.description}</p>
                                 </div>
-                                <p>${product.price}</p>
+                                <p className="bg-blue-400 h-8 text-blue-950 font-bold py-1 px-2 rounded">${product.price}</p>
                             </div>
-                            <button>Add to cart</button>
+                            <button className="hover:bg-amber-800 hover:text-amber-50 px-3 w-72 bg-red-400 mx-23 py-4 rounded-2xl text-blue-950 font-extrabold text-2xl">Add to cart</button>
                         </div>
                     )
                 })}
