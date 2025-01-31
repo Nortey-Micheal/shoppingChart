@@ -9,6 +9,12 @@ function App() {
     {label: "Contact Us",url: "/"},
   ]
 
+  const shoes = [
+    {
+      
+    }
+  ]
+
   return (
     <>
       <Navbar image="src/assets/react.sgv" links={navLinks} />
