@@ -16,8 +16,8 @@ export function Products({products}:productsProps) {
                     <div key={index}>
                         <img src={product.image} alt="" />
                         <div>
-                        <p>{product.description}</p>
-                        <p>${product.price}</p>
+                            <p>{product.description}</p>
+                            <p>${product.price}</p>
                         </div>
                         <button>Add to cart</button>
                     </div>
