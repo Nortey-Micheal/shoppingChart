@@ -48,7 +48,7 @@ export function Navbar({links,image}: navbarProps) {
                             )
                         })}
                     </ul>
-                    <button onClick={changeDisplay} className="cursor-pointer w-12"  style={{backgroundImage: `url('src/assets/cart.svg')`,backgroundRepeat: "no-repeat",position:"relative"}}><p className="absolute bottom-3 left-5 text-blue-950 bg-blue-300 rounded-full w-7">{cart.length}</p></button>
+                    <button onClick={changeDisplay} className="cursor-pointer w-12"  style={{backgroundImage: `url('/assets/cart.svg')`,backgroundRepeat: "no-repeat",position:"relative"}}><p className="absolute bottom-3 left-5 text-blue-950 bg-blue-300 rounded-full w-7">{cart.length}</p></button>
                 </div>
             </div>
         </nav>
