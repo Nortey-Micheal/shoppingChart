@@ -1,15 +1,24 @@
-import { createContext, ReactNode } from "react";
-import { Cart } from "./cartContext";
+import { createContext, Dispatch, ReactNode, SetStateAction, useState } from "react";
+// import { Cart } from "./cartContext";
+import { product } from "../components/products";
 
-export const CartContext = createContext(Cart)
+type CartContextType = {
+    cart: product[],
+    setCart: Dispatch<SetStateAction<product[]>>
+}
+
+export const CartContext = createContext<CartContextType | undefined>(undefined)
 
 type cartProviderProps = {
     children: ReactNode
 }
 
 export function CartProvider({children}:cartProviderProps){
+
+    const [ cart, setCart ] = useState<product[]>([])
+
     return (
-        <CartContext.Provider value={Cart}>
+        <CartContext.Provider value={{ cart,setCart }}>
             {children}
         </CartContext.Provider>
     )

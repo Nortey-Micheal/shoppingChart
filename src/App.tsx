@@ -1,5 +1,8 @@
+import { useContext } from "react"
+import { Items } from "./components/items"
 import { Navbar } from "./components/navbar"
 import { Products } from "./components/products"
+import { CartContext } from "./context/cartProvider"
 
 // import { useState } from "react"
 function App() {
@@ -76,11 +79,20 @@ function App() {
     }
   ]
 
+  const cartContext = useContext(CartContext)
+
+  if (!cartContext) {
+    throw new Error("useContext must be used within a CartProvider")
+  }
+
+  const {cart,setCart} = cartContext
+
   return (
     <>
       <Navbar image="src/assets/react.sgv" links={navLinks} />
       <Products productType="Shoes" products={shoes} />
       <Products productType="Watches" products={watches} />
+      <Items purchase={cart}/>
     </>
   )
 }

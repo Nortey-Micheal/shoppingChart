@@ -1,1 +1,3 @@
-export let Cart = []
+// import { product } from "../components/products";
+
+// export const Cart:product[] = []
