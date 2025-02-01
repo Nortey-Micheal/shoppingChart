@@ -44,7 +44,7 @@ export function Navbar({links,image}: navbarProps) {
                     <ul className="flex lg:gap-14 gap-3">
                         {links.map((link,index) => {
                             return (
-                                <li className=" lg:font-bold text-blue-50 bg-blue-500 px-2 rounded hover:text-blue-500 hover:bg-blue-50" key={index}><a href={link.url} >{link.label}</a></li>
+                                <li className="sm:text-sm lg:font-bold text-blue-50 bg-blue-500 px-2 rounded hover:text-blue-500 hover:bg-blue-50" key={index}><a href={link.url} >{link.label}</a></li>
                             )
                         })}
                     </ul>
