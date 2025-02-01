@@ -55,7 +55,7 @@ export function Products({products,productType}:productsProps) {
                                 </div>
                                 <p className="bg-blue-400 h-8 text-blue-950 font-bold py-1 px-2 rounded">${product.price}</p>
                             </div>
-                            <button onClick={() => addToCart(product)} className="hover:bg-amber-800 hover:text-amber-50 cursor-pointer px-3 w-full bg-red-400 py-4 rounded-2xl text-blue-950 font-extrabold text-2xl">Add to cart</button>
+                            <button onClick={() => addToCart(product)} className="hover:bg-amber-800 hover:text-amber-50 cursor-pointer px-3 w-3/4 mx-auto bg-red-400 py-4 rounded-2xl text-blue-950 font-extrabold text-2xl">Add to cart</button>
                         </div>
                     )
                 })}
