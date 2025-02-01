@@ -41,13 +41,13 @@ export function Products({products,productType}:productsProps) {
     }
 
     return (
-        <section className="px-2 max-w-5xl mb-20 min-w-[400px] lg:mx-auto">
+        <section className="px-2 max-w-5xl mb-20 min-w-[390px] lg:mx-auto">
             <h2 className="text-3xl my-10 text-center underline underline-offset-5">{productType}</h2>
             <div className="grid lg:grid-rows-3 lg:grid-flow-col border-2 rounded-2xl p-4 gap-5 ">
                 {products.map((product,index) => {
                     return (
                         <div className="bg-blue-200 cursor-default lg:h-[600px] sm:w-[350px] max-w-[500px] lg:w-[450px] w-full rounded-2xl sm:mx-auto" key={index}>
-                            <img className="h-[400px] w-full rounded-t-2xl bg-blue-50" src={product.image} alt="" />
+                            <img className="md:h-[400px] h-[300px] w-full rounded-t-2xl bg-blue-50" src={product.image} alt="" />
                             <div className="flex gap-2 py-3 px-3 ">
                                 <div className="">
                                     <h3 className="text-2xl mb-5 font-extrabold">{product.name}</h3>
