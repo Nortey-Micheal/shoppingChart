@@ -37,7 +37,7 @@ export function Navbar({links,image}: navbarProps) {
     }
 
     return (
-        <nav className="sticky top-0 min-w-[510px] bg-blue-900 text-blue-100 px-2 py-3 text-lg">
+        <nav className="sticky top-0 min-w-[450px] bg-blue-900 text-blue-100 px-2 py-3 text-lg">
             <div className="flex justify-between max-w-5xl lg:mx-auto">
                 <img src={image} alt="Logo" />
                 <div className="flex gap-10">

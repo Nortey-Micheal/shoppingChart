@@ -41,7 +41,7 @@ export function Products({products,productType}:productsProps) {
     }
 
     return (
-        <section className="px-2 max-w-5xl mb-20 min-w-lg lg:mx-auto">
+        <section className="px-2 max-w-5xl mb-20 min-w-[450px] lg:mx-auto">
             <h2 className="text-3xl my-10 text-center underline underline-offset-5">{productType}</h2>
             <div className="grid lg:grid-rows-3 lg:grid-flow-col border-2 rounded-2xl p-4 gap-5 ">
                 {products.map((product,index) => {
