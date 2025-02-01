@@ -46,7 +46,7 @@ export function Products({products,productType}:productsProps) {
             <div className="grid lg:grid-rows-3 lg:grid-flow-col border-2 rounded-2xl p-4 gap-5 ">
                 {products.map((product,index) => {
                     return (
-                        <div className="bg-blue-200 cursor-default h-[600px] w-3/4 lg:w-[450px] rounded-2xl sm:mx-auto" key={index}>
+                        <div className="bg-blue-200 cursor-default lg:h-[600px] max-w-[500px] lg:w-[450px] rounded-2xl sm:mx-auto" key={index}>
                             <img className="h-[400px] w-full rounded-t-2xl bg-blue-50" src={product.image} alt="" />
                             <div className="flex gap-2 py-3 px-3 ">
                                 <div className="">
