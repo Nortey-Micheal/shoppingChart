@@ -68,7 +68,7 @@ export function Items({purchase}:itemsProps) {
             </tr>
         </table>
         <button onClick={() => setDisplay('none')} className="absolute top-1 right-1 w-8 rounded-full cursor-pointer font-extrabold bg-green-600 text-2xl text-red-50">X</button>
-        <button onClick={checkout} className="hover:bg-amber-800 hover:text-amber-50 cursor-pointer px-3 w-72 bg-red-400 mx-23 py-4 rounded-2xl text-blue-950 font-extrabold text-2xl">Checkout</button>
+        <button onClick={checkout} className="hover:bg-amber-800 hover:text-amber-50 cursor-pointer px-3 w-72 bg-red-400 lg:mx-23 mx-5 py-4 rounded-2xl text-blue-950 font-extrabold text-2xl">Checkout</button>
     </section>
  )
 }
