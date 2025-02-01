@@ -1,6 +1,6 @@
 import { createContext, Dispatch, ReactNode, SetStateAction, useState } from "react";
 
- export type DisplayContextType = {
+export type DisplayContextType = {
     display: string,
     setDisplay: Dispatch<SetStateAction<string>>
 }

@@ -1,5 +1,4 @@
 import { createContext, Dispatch, ReactNode, SetStateAction, useState } from "react";
-// import { Cart } from "./cartContext";
 import { product } from "../components/products";
 
 type CartContextType = {

@@ -85,7 +85,7 @@ function App() {
     throw new Error("useContext must be used within a CartProvider")
   }
 
-  const {cart,setCart} = cartContext
+  const {cart} = cartContext
 
   return (
     <>

@@ -29,12 +29,18 @@ export function Items({purchase}:itemsProps) {
             throw new Error("useContext must be used within a CartProvider")
         }
     
-        const { cart, setCart }  = cartContext;
+        const { setCart }  = cartContext;
 
     const checkout = () => {
         alert("Thanks for your purchase")
         setDisplay('none')
         setCart([])
+    }
+
+    let totalQuantity = 0
+
+    for (let i = 0; i < purchase.length;i++) {
+        totalQuantity += (purchase[i].quantity || 0)
     }
 
  return (
@@ -57,8 +63,8 @@ export function Items({purchase}:itemsProps) {
             ))}
             <tr className="font-bold">
                 <td className="p-2">Total </td>
-                <td> </td>
-                <td className="p-2  ">{total}</td>
+                <td className="p-2">{totalQuantity} </td>
+                <td className="p-2 ">{total}</td>
             </tr>
         </table>
         <button onClick={() => setDisplay('none')} className="absolute top-1 right-1 w-8 rounded-full cursor-pointer font-extrabold bg-green-600 text-2xl text-red-50">X</button>

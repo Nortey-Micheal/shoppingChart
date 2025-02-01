@@ -20,7 +20,7 @@ export function Navbar({links,image}: navbarProps) {
         throw new Error("useContext must be used within a CartProvider")
     }
 
-    const { cart, setCart} = cartContext
+    const { cart } = cartContext
 
     if (!displayContext) {
         throw new Error("useContext must be used within a CartProvider")
