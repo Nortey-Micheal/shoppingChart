@@ -10,7 +10,7 @@ function App() {
   const navLinks = [
     {label: "Home",url:"/"},
     {label: "About",url: "/"},
-    {label: "Contact Us",url: "/"},
+    {label: "Service",url: "/"},
   ]
 
   const shoes = [
