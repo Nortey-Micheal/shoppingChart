@@ -40,8 +40,8 @@ export function Navbar({links,image}: navbarProps) {
         <nav className="sticky top-0 min-w-[450px] bg-blue-900 text-blue-100 px-2 py-3 text-lg">
             <div className="flex justify-between max-w-5xl lg:mx-auto">
                 <img src={image} alt="Logo" />
-                <div className="flex gap-10">
-                    <ul className="flex gap-14">
+                <div className="flex lg:gap-10 gap-3">
+                    <ul className="flex lg:gap-14 gap-3">
                         {links.map((link,index) => {
                             return (
                                 <li className=" font-bold text-blue-50 bg-blue-500 px-2 rounded hover:text-blue-500 hover:bg-blue-50" key={index}><a href={link.url} >{link.label}</a></li>
