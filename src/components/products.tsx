@@ -41,7 +41,7 @@ export function Products({products,productType}:productsProps) {
     }
 
     return (
-        <section className="px-2 max-w-5xl mb-20 min-w-[450px] lg:mx-auto">
+        <section className="px-2 max-w-5xl mb-20 min-w-[400px] lg:mx-auto">
             <h2 className="text-3xl my-10 text-center underline underline-offset-5">{productType}</h2>
             <div className="grid lg:grid-rows-3 lg:grid-flow-col border-2 rounded-2xl p-4 gap-5 ">
                 {products.map((product,index) => {
@@ -55,7 +55,7 @@ export function Products({products,productType}:productsProps) {
                                 </div>
                                 <p className="bg-blue-400 h-8 text-blue-950 font-bold py-1 px-2 rounded">${product.price}</p>
                             </div>
-                            <button onClick={() => addToCart(product)} className="hover:bg-amber-800 hover:text-amber-50 cursor-pointer px-3 w-3/4 mx-auto bg-red-400 py-4 rounded-2xl text-blue-950 font-extrabold text-2xl">Add to cart</button>
+                            <button onClick={() => addToCart(product)} className="hover:bg-amber-800 hover:text-amber-50 cursor-pointer px-3 w-3/4 mx-10 bg-red-400 py-4 rounded-2xl text-blue-950 font-extrabold text-2xl">Add to cart</button>
                         </div>
                     )
                 })}
